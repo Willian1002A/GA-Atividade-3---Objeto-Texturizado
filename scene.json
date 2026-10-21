@@ -1,0 +1,203 @@
+{
+  "camera": {
+    "position": [
+      0.0,
+      3.2,
+      6.8
+    ],
+    "yaw": -90.0,
+    "pitch": -18.0,
+    "fov": 45.0,
+    "movement_speed": 4.5,
+    "mouse_sensitivity": 0.1
+  },
+  "lights": [
+    {
+      "name": "Key Light",
+      "enabled": true,
+      "position": [
+        3.5,
+        5.0,
+        3.5
+      ],
+      "ambient": [
+        0.08,
+        0.08,
+        0.09
+      ],
+      "diffuse": [
+        0.95,
+        0.90,
+        0.82
+      ],
+      "specular": [
+        1.0,
+        0.98,
+        0.90
+      ]
+    },
+    {
+      "name": "Fill Light",
+      "enabled": true,
+      "position": [
+        -4.0,
+        3.5,
+        2.0
+      ],
+      "ambient": [
+        0.04,
+        0.05,
+        0.08
+      ],
+      "diffuse": [
+        0.35,
+        0.45,
+        0.65
+      ],
+      "specular": [
+        0.4,
+        0.5,
+        0.7
+      ]
+    },
+    {
+      "name": "Back Light",
+      "enabled": true,
+      "position": [
+        0.0,
+        4.5,
+        -4.5
+      ],
+      "ambient": [
+        0.02,
+        0.02,
+        0.03
+      ],
+      "diffuse": [
+        0.85,
+        0.55,
+        0.30
+      ],
+      "specular": [
+        1.0,
+        0.75,
+        0.45
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "name": "Pedestal Altar",
+      "obj_path": "assets/pedestal.obj",
+      "mtl_path": "assets/pedestal.mtl",
+      "texture_path": "assets/pedestal_diffuse.png",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bezier_trajectory": null
+    },
+    {
+      "name": "Cristal Místico",
+      "obj_path": "assets/crystal.obj",
+      "mtl_path": "assets/crystal.mtl",
+      "texture_path": "assets/crystal_diffuse.png",
+      "position": [
+        0.0,
+        1.8,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        45.0,
+        0.0
+      ],
+      "scale": [
+        0.55,
+        0.55,
+        0.55
+      ],
+      "bezier_trajectory": {
+        "speed": 0.35,
+        "mode": "pingpong",
+        "control_points": [
+          [
+            -0.8,
+            1.4,
+            -0.6
+          ],
+          [
+            1.0,
+            2.4,
+            -0.4
+          ],
+          [
+            -1.0,
+            2.6,
+            0.4
+          ],
+          [
+            0.8,
+            1.5,
+            0.6
+          ]
+        ]
+      }
+    },
+    {
+      "name": "Pilar Rúnico",
+      "obj_path": "assets/pillar.obj",
+      "mtl_path": "assets/pillar.mtl",
+      "texture_path": "assets/pillar_diffuse.png",
+      "position": [
+        -1.8,
+        1.22,
+        -0.6
+      ],
+      "rotation": [
+        0.0,
+        25.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.85,
+        0.65
+      ],
+      "bezier_trajectory": null
+    },
+    {
+      "name": "Monólito Dourado",
+      "obj_path": "assets/monolith.obj",
+      "mtl_path": "assets/monolith.mtl",
+      "texture_path": "assets/monolith_diffuse.png",
+      "position": [
+        1.8,
+        0.61,
+        0.4
+      ],
+      "rotation": [
+        0.0,
+        -35.0,
+        0.0
+      ],
+      "scale": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "bezier_trajectory": null
+    }
+  ]
+}

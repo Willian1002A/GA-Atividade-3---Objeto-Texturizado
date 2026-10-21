@@ -1,0 +1,6 @@
+newmtl CrystalMat
+Ka 0.2 0.3 0.4
+Kd 0.2 0.8 1.0
+Ks 0.9 0.9 1.0
+Ns 128.0
+map_Kd crystal_diffuse.png

@@ -1,0 +1,6 @@
+newmtl PillarMat
+Ka 0.2 0.2 0.2
+Kd 0.6 0.6 0.65
+Ks 0.3 0.3 0.3
+Ns 32.0
+map_Kd pillar_diffuse.png
