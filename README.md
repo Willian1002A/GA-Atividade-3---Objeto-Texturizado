@@ -1,6 +1,6 @@
-# Visualizador 3D
+# Atividade 3 - Objeto Texturizado (Computação Gráfica)
 
-Aplicação desenvolvida em Python (PyOpenGL, GLFW, PyGLM) para a disciplina de Computação Gráfica. O projeto implementa um visualizador de cenas 3D (diorama) configurado via arquivo JSON, com suporte a carregamento de malhas Wavefront (`.obj` e `.mtl`), iluminação de Phong com três fontes de luz, transformações interativas de objetos e animação paramétrica por Curva de Bézier Cúbica.
+Aplicação desenvolvida em Python com PyOpenGL e GLFW para leitura de malhas Wavefront (`.obj` e `.mtl`), extração de coordenadas de textura (`vt`), carregamento de imagens e renderização de objetos texturizados.
 
 ## Execução e Setup
 
@@ -8,51 +8,23 @@ Aplicação desenvolvida em Python (PyOpenGL, GLFW, PyGLM) para a disciplina de 
 ```bash
 pip install -r requirements.txt
 
-```
 
 2. Executar a aplicação:
+
 ```bash
 python main.py
 
 ```
 
-Nota: A cena, os objetos e as posições iniciais são carregados automaticamente a partir do arquivo `scene.json` e dos diretórios de assets.
-
 ## Controles
 
-* W, A, S, D: Movimentação da câmera
-* E / Q: Elevação da câmera (subir / descer)
-* Botão Direito do Mouse: Girar a visualização
-* TAB: Alternar entre os objetos da cena
-* J/L, U/O, I/K: Translação do objeto ativo nos eixos X, Y e Z
-* R/F, T/G, Y/H: Rotação do objeto ativo nos eixos X, Y e Z
-* N / M: Ajustar escala do objeto ativo
-* Tecla 1: Liga / Desliga a Luz Principal (Key Light)
-* Tecla 2: Liga / Desliga a Luz de Preenchimento (Fill Light)
-* Tecla 3: Liga / Desliga a Contra-Luz (Back Light)
-* Tecla X: Alterna entre textura e o material Phong puro (.mtl)
-* ESPAÇO: Pausa / Retoma a animação da Curva de Bézier
-* ESC: Encerra a aplicação
+* **ESC:** Encerra a aplicação.
 
 ## Estrutura do Projeto
 
-* main.py: Inicialização do GLFW, loop de renderização, tratamento de eventos e gerenciamento do estado dos objetos.
-* camera.py: Classe de controle de câmera com matrizes View (`lookAt`) e Projection (`perspective`).
-* obj_loader.py: Parser para carregamento de malhas `.obj`, arquivos de material `.mtl` e texturas 2D.
-* shader.py: Utilitário para compilação e gerenciamento de programas GLSL.
-* bezier.py: Implementação matemática da Curva de Bézier Cúbica para animação de trajetórias.
-* shaders/vertex_shader.glsl: Transformações geométricas e repasse de normais/coordenadas.
-* shaders/fragment_shader.glsl: Aplicação do Modelo de Iluminação de Phong e texturização.
-* scene.json: Arquivo de configuração contendo parâmetros da câmera, luzes e entidades da cena.
-* requirements.txt: Lista de dependências do projeto.
-
-## Procedência dos Assets
-
-* **Modelos 3D e Texturas:** Os modelos 3D (`.obj`), os arquivos de material (`.mtl`) e as texturas utilizados na composição do diorama foram modelados, texturizados e produzidos integralmente pelo autor para esta aplicação.
-
-## Referências Bibliográficas e Documentação
-
-1. **LearnOpenGL (Joey de Vries):** Referência principal para a estruturação do pipeline gráfico, Shaders GLSL, gerenciamento de buffers (VAO/VBO) e modelo de iluminação de Phong. Disponível em: [https://learnopengl.com/](https://learnopengl.com/)
-2. **PyOpenGL Documentation:** Documentação oficial das bibliotecas de ligação OpenGL para Python. Disponível em: [http://pyopengl.sourceforge.net/](http://pyopengl.sourceforge.net/)
-3. **PyGLM Documentation:** Biblioteca de matemática para computação gráfica em Python (manipulação de vetores e matrizes MVP). Disponível em: [https://pypi.org/project/PyGLM/](https://pypi.org/project/PyGLM/)
-4. **A Primer on Bézier Curves (Pomax):** Referência matemática para interpolação paramétrica e implementação de curvas de Bézier cúbicas. Disponível em: [https://pomax.github.io/bezierinfo/](https://pomax.github.io/bezierinfo/)
+* **main.py:** Inicialização do GLFW, criação da janela, gerenciamento do loop gráfico e matrizes MVP.
+* **obj_loader.py:** Parser para leitura de vértices (`v`), coordenadas de textura (`vt`), leitura do arquivo de material (`.mtl`) via `map_Kd` e criação dos buffers (VAO/VBO).
+* **shader.py:** Classe utilitária para leitura, compilação e gerenciamento de Shaders GLSL.
+* **shaders/vertex_shader.glsl:** Pipeline geométrico e repasse das coordenadas UV.
+* **shaders/fragment_shader.glsl:** Amostragem da textura 2D no fragmento.
+* **requirements.txt:** Lista de dependências (PyOpenGL, GLFW, PyGLM, Pillow, Numpy).

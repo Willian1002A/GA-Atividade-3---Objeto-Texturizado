@@ -1,6 +1,0 @@
-newmtl MonolithMat
-Ka 0.3 0.2 0.1
-Kd 0.8 0.6 0.2
-Ks 0.7 0.6 0.3
-Ns 64.0
-map_Kd monolith_diffuse.png

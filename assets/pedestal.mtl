@@ -1,6 +1,0 @@
-newmtl PedestalMat
-Ka 0.2 0.2 0.2
-Kd 0.7 0.7 0.7
-Ks 0.3 0.3 0.3
-Ns 16.0
-map_Kd pedestal_diffuse.png

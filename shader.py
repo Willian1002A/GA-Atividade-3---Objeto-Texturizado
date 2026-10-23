@@ -4,17 +4,14 @@ import glm
 
 class Shader:
     def __init__(self, vertex_path, fragment_path):
-        # Lê os códigos dos arquivos
         with open(vertex_path, "r", encoding="utf-8") as f:
             v_code = f.read()
         with open(fragment_path, "r", encoding="utf-8") as f:
             f_code = f.read()
 
-        # Compila Vertex e Fragment Shaders
         v_shader = self._compile(GL_VERTEX_SHADER, v_code)
         f_shader = self._compile(GL_FRAGMENT_SHADER, f_code)
 
-        # Linka no programa final da GPU
         self.program = glCreateProgram()
         glAttachShader(self.program, v_shader)
         glAttachShader(self.program, f_shader)
