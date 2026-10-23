@@ -8,6 +8,7 @@ Aplicação desenvolvida em Python com PyOpenGL e GLFW para leitura de malhas Wa
 ```bash
 pip install -r requirements.txt
 
+```
 
 2. Executar a aplicação:
 
